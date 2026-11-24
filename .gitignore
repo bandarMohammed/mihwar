@@ -1,0 +1,25 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies and build output (phase 3)
+node_modules/
+dist/
+build/
+.next/
+coverage/
+
+# Logs and local files
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# Local tool settings
+.vscode/
+.idea/
+.claude/settings.local.json
