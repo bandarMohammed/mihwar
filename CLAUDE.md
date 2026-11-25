@@ -89,7 +89,8 @@ Approved 2026-11-22 (ADR-3001 → ADR-3007, details and reasons in `docs/tech-st
 - Follow `docs/design-system.md` for colors, fonts, and components. Don't invent new styles.
 - Every screen handles these states: loading, success, error, empty, no-permission.
 - Permissions are enforced on the server for every endpoint, not only hidden in the UI.
-- Branches: `feature/T-230-short-name`. Commits start with the task ID: `T-230: add request form`.
+- Branches: each group has a protected branch — `group-1-wasl` · `group-2-shell` · `group-3-core` · `group-4-ai`. Start every task from your group's branch (update it first) as `feature/T-230-short-name`, and open the Pull Request **into your group's branch, not `main`**. The group leader reviews and merges; the coordinator merges group branches into `main`.
+- Commits start with the task ID: `T-230: add request form`.
 - One task per branch / PR.
 
 <!-- TODO (Group 4): add any extra conventions from docs/test-plan.md -->
