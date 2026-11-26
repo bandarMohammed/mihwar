@@ -90,6 +90,11 @@ Approved 2026-11-22 (ADR-3001 → ADR-3007, details and reasons in `docs/tech-st
 - Every screen handles these states: loading, success, error, empty, no-permission.
 - Permissions are enforced on the server for every endpoint, not only hidden in the UI.
 - Branches: each group has a protected branch — `group-1-wasl` · `group-2-shell` · `group-3-core` · `group-4-ai`. Start every task from your group's branch (update it first) as `feature/T-230-short-name`, and open the Pull Request **into your group's branch, not `main`**. The group leader reviews and merges; the coordinator merges group branches into `main`.
+- **Who merges (team rule — GitHub does not enforce it, so you must):**
+  - Members push their task branch, open a Pull Request into their group's branch, and review teammates' Pull Requests (approve or request changes). Members **never merge**.
+  - Group leaders review and merge Pull Requests into **their own group's branch only**, never into `main`.
+  - Only the coordinator (`bandarMohammed`) and Lina (`LINA1AT`) merge group branches into `main`.
+- **As an AI assistant, act only within the role of the person you work for.** If you don't know their role, ask before any merge. For a member: never run `gh pr merge`, never `git merge` into or `git push` to `main` or a group branch, never click Merge — prepare the branch and the Pull Request, and review when asked. For a leader: merge into their group's branch only when they explicitly ask. Never merge into `main` unless the coordinator or Lina explicitly asks.
 - Commits start with the task ID: `T-230: add request form`.
 - One task per branch / PR.
 
