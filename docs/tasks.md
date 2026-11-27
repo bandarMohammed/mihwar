@@ -6,7 +6,7 @@ docs/tasks.md
 > **المراجع:** `docs/requirements.md` · `docs/mvp-scope.md` (معتمد) · `docs/screens.md` (الإصدار 4) · `docs/api.md` (v0.8) · `docs/database.md` (مدموج) · `docs/ai.md` (v0.3) · `docs/tech-stack.md` (معتمد) · `docs/test-plan.md`.
 > **معايير القبول:** كل مهمة فيها أهم معاييرها كمربعات، ومعها أرقام `AC-…` من الملحق «معايير القبول» (`acceptance-criteria.md`) — المهمة ما تُقفل إلا لما تنجح كلها.
 > **العدد:** 70 مهمة — Must 56 · Should 10 · Later 4. ⟵ 2026-11-23: أُضيفت T-003 وT-035 (✅ ADR-1003 «حسابي»). نبدأ بـ Must كلها، ثم Should، وLater بعد النسخة الأولى.
-> **المرحلة الثانية مستندات فقط:** هذا الملف يُنفَّذ في المرحلة الثالثة. صاحب كل مهمة ومراجعها يحددهم قائد المجموعة 4 عند التوزيع (Q-4010).
+> **المرحلة الثانية مستندات فقط:** هذا الملف يُنفَّذ في المرحلة الثالثة. صاحب كل مهمة في دليل مجموعته (`reference/phase-3/المجموعات/`)، والمراجع زميل من نفس المجموعة ثم القائد (✅ Q-4010 · 2026-11-28).
 
 ## 1. ترتيب التنفيذ
 
@@ -138,7 +138,7 @@ flowchart RL
 - Links: — · — · FR-09, FR-39 → FR-44, NFR-06, NFR-07
 - Type: خلفية · MVP: Must
 - Depends on: T-080
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل جداول MVP في `docs/database.md` (المرحلة الأولى في §5) تُنشأ من الصفر بالترتيب بدون أخطاء
   - [ ] القيم المسموحة للحالة والأولوية والفئة ونوع الطلب مطابقة لـ `docs/glossary.md`
@@ -149,7 +149,7 @@ flowchart RL
 - Links: — · كل العمليات · NFR-12, NFR-20
 - Type: خلفية · MVP: Must
 - Depends on: T-080
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل خطأ 4xx يرجع `code` بالإنجليزي و`messageAr` بالعربي
   - [ ] القوائم ترجع `items` و`total` و`page` و`pageSize`
@@ -160,7 +160,7 @@ flowchart RL
 - Links: SCR-081 · SCR-160 · `changeMyPassword` · `resetUserPassword` · `login` · NFR-01, NFR-05, FR-39, FR-33 · ✅ ADR-1003
 - Type: خلفية · MVP: Must
 - Depends on: T-101
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] المستخدم يغيّر كلمة مروره بالحالية والجديدة، وتنتهي جلساته الثانية، ولا تظهر كلمة المرور في أي رد أو سجل
   - [ ] مدير النظام فقط يعيّن كلمة مؤقتة، وصاحبها ما يقدر يسوي شي غير تغييرها والخروج حتى يغيّرها
@@ -171,7 +171,7 @@ flowchart RL
 - Links: SCR-001/020/040/060 (الإطار) · `getCurrentUser` · `logout` · `listMyNotifications` · NFR-18, NFR-19, NFR-20
 - Type: واجهة · MVP: Must
 - Depends on: T-080, T-101
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الواجهة RTL بالكامل وبألوان وخطوط ومكوّنات `docs/design-system.md` فقط
   - [ ] مكوّنات جاهزة للحالات الخمس (loading · success · error · empty · no-permission) تستخدمها كل الشاشات
@@ -183,7 +183,7 @@ flowchart RL
 - Links: SCR-001 · `listMyRequests` · `listMyNotifications` · FR-03, FR-04, NFR-19
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-203
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الملخص حسب الحالة يطابق `listMyRequests`
   - [ ] روابط تقديم طلب وطلباتي والإشعارات و«اسأل محور» (SCR-580) تعمل
@@ -194,7 +194,7 @@ flowchart RL
 - Links: SCR-020 · `listDepartmentRequests` · FR-12, NFR-03, NFR-19
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-301
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] تعرض ملخص طلبات قسم المدير فقط
   - [ ] روابط طلبات القسم والإشعارات و«اسأل محور» تعمل
@@ -205,7 +205,7 @@ flowchart RL
 - Links: SCR-040 · `listKpis` · `listInsights` · `listDetectedIssues` · `listAnalysisRuns` · `runAnalysis` · FR-16, FR-18, FR-21, FR-32, NFR-19
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-403, T-501
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] تعرض أبرز الرؤى والمؤشرات والمشكلات وتاريخ آخر تحليل
   - [ ] زر «تشغيل التحليل» وآخر التشغيلات داخل اللوحة (مقترح Q-4408)
@@ -217,7 +217,7 @@ flowchart RL
 - Links: SCR-060 · `getCurrentUser` · NFR-04, NFR-19
 - Type: واجهة · MVP: Must
 - Depends on: T-030
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] تنقل لشاشات الإدارة الخمس و«اسأل محور»
   - [ ] غير مدير النظام يرى «لا تملك صلاحية هذه الصفحة»
@@ -228,7 +228,7 @@ flowchart RL
 - Links: SCR-081 · الإطار (SCR-001/020/040/060) · `getCurrentUser` · `changeMyPassword` · `logout` · FR-39, NFR-01, NFR-05 · ✅ ADR-1003
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-003
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] بطاقة المستخدم (الاسم والدور) وزر «تسجيل الخروج» أسفل القائمة الجانبية لكل الأدوار، وفي القائمة المخفية تبقى الأيقونات
   - [ ] SCR-081 تعرض بيانات الحساب للقراءة فقط، ونموذج تغيير كلمة المرور يتحقق من تطابق الكلمتين قبل الإرسال
@@ -241,7 +241,7 @@ flowchart RL
 - Links: — · — · NFR-21, NFR-23
 - Type: اختبار وإعداد · MVP: Must
 - Depends on: —
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] المستودع فيه مجلد للواجهة (Next.js) ومجلد للخادم (NestJS) حسب ADR-3001 وADR-3002، ويشتغلان محليًا بأمر واحد عبر Docker (ADR-3007)
   - [ ] أوامر التثبيت والتشغيل والاختبار مكتوبة في `CLAUDE.md` (قسم Commands)
@@ -252,7 +252,7 @@ flowchart RL
 - Links: — · — · NFR-21
 - Type: اختبار وإعداد · MVP: Must
 - Depends on: T-080
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل Pull Request يشغّل الاختبارات والتنسيق تلقائيًا، والفشل يمنع الدمج
   - [ ] `main` محمي ولا يقبل رفعًا مباشرًا (ADR-4008)
@@ -262,7 +262,7 @@ flowchart RL
 - Links: — · — · NFR-02
 - Type: اختبار وإعداد · MVP: Must
 - Depends on: T-001
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] مستخدم اختبار لكل دور، وقسمان على الأقل، وطلبات بكل الحالات، وبيانات شركة اختبارية ثابتة
   - [ ] الأقسام الأربعة وجدول ربط التصنيفات الـ 13 بالأقسام محمّلة (ADR-4201)
@@ -273,7 +273,7 @@ flowchart RL
 - Links: — · كل العمليات · NFR-02, NFR-03, NFR-04
 - Type: اختبار وإعداد · MVP: Must
 - Depends on: T-102
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل عملية × كل دور تعطي النتيجة المتوقعة في جدول الصلاحيات (`docs/test-plan.md` 4.1)
   - [ ] تنجح معايير الملحق: AC-001 · AC-002 · AC-303 · AC-124
@@ -283,7 +283,7 @@ flowchart RL
 - Links: كل شاشات MVP · — · FR-01 → FR-17
 - Type: اختبار وإعداد · MVP: Must
 - Depends on: T-230, T-331, T-530, T-440
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] سيناريو كامل: موظف يرسل طلب ← يتوجّه ← المدير يسنده ويحدّثه ← الموظف يستلم إشعار ← الإدارة العليا تشوف أثره في التحليل
   - [ ] سيناريوهات INT في `docs/test-plan.md` 4.6 تنجح
@@ -294,7 +294,7 @@ flowchart RL
 - Links: SCR-080 · `login` · `logout` · `getCurrentUser` · NFR-01, NFR-05, FR-39
 - Type: خلفية · MVP: Must
 - Depends on: T-001, T-002
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] دخول صحيح يفتح جلسة آمنة داخل الخادم (ADR-3004)، وخطأ البريد أو كلمة المرور يرجع رسالة واحدة
   - [ ] كلمات المرور محفوظة مشفّرة ولا تظهر في أي رد أو سجل
@@ -305,7 +305,7 @@ flowchart RL
 - Links: — · كل العمليات · NFR-02, NFR-03, NFR-04, FR-35
 - Type: خلفية · MVP: Must
 - Depends on: T-101
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل عملية تفحص الدور من `role_permissions` قبل التنفيذ (ADR-3101)
   - [ ] قسم المدير يُؤخذ من الجلسة لا من الرابط (ADR-4002)، وطلب قسم آخر يرجع 403
@@ -316,7 +316,7 @@ flowchart RL
 - Links: SCR-160 · `listUsers` · `createUser` · `getUser` · `updateUser` · `deactivateUser` · FR-33, FR-39, NFR-04
 - Type: خلفية · MVP: Must
 - Depends on: T-102
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] لا حذف للمستخدم، إيقاف فقط (ADR-4001)
   - [ ] مدير القسم لازم يكون له قسم
@@ -328,7 +328,7 @@ flowchart RL
 - Links: SCR-161 · `listRoles` · `listPermissions` · `updateRolePermissions` · FR-35, NFR-04
 - Type: خلفية · MVP: Must
 - Depends on: T-102
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الأدوار الأربعة ثابتة، وتعديل صلاحيات دور يسري على الخادم مباشرة
   - [ ] تنجح معايير الملحق: AC-117 · AC-118 · AC-119 · AC-120
@@ -338,7 +338,7 @@ flowchart RL
 - Links: SCR-162 · `listSettings` · `updateSetting` · FR-36, NFR-23
 - Type: خلفية · MVP: Must
 - Depends on: T-102
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] حدود الثقة (0.85 و0.60) وقسم الاستقبال الافتراضي وجدول ربط التصنيف بالقسم إعدادات يعدّلها مدير النظام
   - [ ] الخلفية Must لأن ذكاء وصل يعتمد عليها؛ الشاشة SCR-162 Should (T-133)
@@ -349,7 +349,7 @@ flowchart RL
 - Links: SCR-080 · `login` · NFR-01
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-101
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] بعد الدخول يتوجّه كل دور للوحته: SCR-001 · SCR-020 · SCR-040 · SCR-060
   - [ ] الحالات الخمس ظاهرة
@@ -360,7 +360,7 @@ flowchart RL
 - Links: SCR-160 · عمليات T-103 · `resetUserPassword` · FR-33, FR-39
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-103, T-003
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] إضافة وتعديل مستخدم نوافذ داخل الشاشة (ADR-1101)، والإيقاف بتأكيد
   - [ ] زر «تعيين كلمة مرور مؤقتة» بتأكيد (✅ ADR-1003 · `resetUserPassword` من T-003) ⟵ أُضيف بقرار المنسق 2026-11-23
@@ -371,7 +371,7 @@ flowchart RL
 - Links: SCR-161 · عمليات T-104 · FR-35
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-104
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] عرض وتعديل صلاحيات كل دور مع تأكيد قبل الحفظ
   - [ ] تنجح معايير الملحق: AC-009 · AC-118 · AC-119
@@ -381,7 +381,7 @@ flowchart RL
 - Links: SCR-162 · `listSettings` · `updateSetting` · FR-36
 - Type: واجهة · MVP: Should
 - Depends on: T-030, T-105
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] تعديل قيمة إعداد مع تأكيد، وقيمة بصيغة خاطئة ترجع رسالة عربية واضحة
   - [ ] تنجح معايير الملحق: AC-009 · AC-122
@@ -391,7 +391,7 @@ flowchart RL
 - Links: SCR-201 · `createRequest` · FR-01, FR-06 → FR-09, FR-40
 - Type: خلفية · MVP: Must
 - Depends on: T-102, T-260
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الموظف يرسل وصفًا ويُحفظ الطلب بحالة `new` («جديد») مع قرار الذكاء الاصطناعي وأول سطر في سجل الحالة في عملية واحدة
   - [ ] وصف فارغ يرجع 400 ولا يُنشأ طلب
@@ -402,7 +402,7 @@ flowchart RL
 - Links: SCR-201 · SCR-203 · SCR-321 · `uploadRequestDocument` · `downloadRequestDocument` · FR-02, FR-10, NFR-05
 - Type: خلفية · MVP: Should
 - Depends on: T-201
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الملفات في تخزين متوافق مع S3 وتنزل بروابط مؤقتة بعد فحص الصلاحية (ADR-3005)
   - [ ] تنجح معايير الملحق: AC-211 · AC-212
@@ -412,7 +412,7 @@ flowchart RL
 - Links: SCR-202 · SCR-203 · `listMyRequests` · `getRequest` · `getRequestHistory` · FR-03, NFR-08, NFR-20
 - Type: خلفية · MVP: Must
 - Depends on: T-201
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الموظف يرى طلباته فقط، ولا يرى الأولوية ولا المعالج ولا قرار الذكاء الاصطناعي
   - [ ] تنجح معايير الملحق: AC-213 · AC-214 · AC-215 · AC-216 · AC-217
@@ -422,7 +422,7 @@ flowchart RL
 - Links: SCR-204 · SCR-542 · `getRequestStatusReport` · FR-05
 - Type: خلفية · MVP: Must
 - Depends on: T-203
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الموظف يرى أعداد طلباته حسب الحالة، والإدارة العليا أعداد كل الأقسام بدون نصوص (✅ Q-08 · ADR-1204)
   - [ ] تنجح معايير الملحق: AC-219
@@ -432,7 +432,7 @@ flowchart RL
 - Links: SCR-203 · `closeRequest` · FR-15, FR-03, NFR-08
 - Type: خلفية · MVP: Must
 - Depends on: T-203, T-105
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الموظف يقفل طلبه بعد الحل (`resolved` ← `closed`) مع سطر في سجل الحالة (✅ Q-1201)
   - [ ] مهمة خلفية يومية تقفل الطلب بعد `auto_close_days` (إعداد، مقترح 3 أيام عمل)
@@ -443,7 +443,7 @@ flowchart RL
 - Links: SCR-280 · `listSensitiveRequests` · `releaseSensitiveRequest` · FR-08, FR-13, NFR-02
 - Type: خلفية · MVP: Must
 - Depends on: T-260, T-103
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] فقط صاحب `users.review_sensitive = true` يشوف الشكاوى الحساسة ويحوّلها (✅ Q-3204)
   - [ ] الشكوى على مدير ما تظهر له وما تتحول لقسمه (ADR-4203)
@@ -454,7 +454,7 @@ flowchart RL
 - Links: SCR-201 · `createRequest` · FR-01, FR-02
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-201
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الموظف يرسل طلبًا بالوصف فقط (بدون اختيار قسم أو فئة)، ويظهر في «طلباتي» بحالة «جديد»
   - [ ] رسالة خطأ واضحة لو الوصف فاضي، والنص ما يضيع
@@ -466,7 +466,7 @@ flowchart RL
 - Links: SCR-202 · `listMyRequests` · FR-03
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-203
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] القائمة بطلبات الموظف نفسه مع التصفية حسب الحالة
   - [ ] تنجح معايير الملحق: AC-009 · AC-213
@@ -476,7 +476,7 @@ flowchart RL
 - Links: SCR-203 · `getRequest` · `getRequestHistory` · FR-03, FR-02
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-203, T-205
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الخط الزمني للحالة ظاهر، وطلب موظف آخر يرجع رسالة منع
   - [ ] زر «تأكيد الحل وإغلاق الطلب» يظهر لما تكون الحالة «مكتمل» (✅ Q-1201)
@@ -487,7 +487,7 @@ flowchart RL
 - Links: SCR-204 · `getRequestStatusReport` · FR-05
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-204
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] اختيار الفترة يعرض الأعداد حسب الحالة، وشكل التنزيل حسب Q-1206
   - [ ] تنجح معايير الملحق: AC-009 · AC-219
@@ -497,7 +497,7 @@ flowchart RL
 - Links: SCR-280 · `listSensitiveRequests` · `releaseSensitiveRequest` · `getRequest` · FR-08, FR-13
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-206
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الرابط يظهر في لوحة المستخدم إذا عنده الصلاحية فقط
   - [ ] تحويل الشكوى لقسم مع ملاحظة وتأكيد قبل الحفظ
@@ -508,7 +508,7 @@ flowchart RL
 - Links: — · (داخل `createRequest`) · FR-06, FR-07, FR-08, NFR-10, NFR-24
 - Type: ذكاء اصطناعي · MVP: Must
 - Depends on: T-001, T-105
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] المخرج منظم: النوع والتصنيف (13) والأولوية (4 درجات) والقرار والثقة، والقسم من جدول الربط لا من النموذج (ADR-4201)
   - [ ] قواعد الثقة: 0.85 فأعلى توجيه تلقائي · 0.60 إلى 0.85 توجيه مع علامة مراجعة · أقل من 0.60 سؤال توضيحي واحد (ADR-4202)
@@ -521,7 +521,7 @@ flowchart RL
 - Links: — · — · FR-06, FR-07, FR-08, NFR-10
 - Type: اختبار وإعداد · MVP: Must
 - Depends on: T-260
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] دقة التصنيف 85٪ فأكثر · القسم 90٪ · الأولوية 75٪ · مراجعة الحساس 100٪ (`docs/ai.md` 5.1)
   - [ ] زمن التصنيف لا يتجاوز 5 ثوانٍ (مقترح)
@@ -532,7 +532,7 @@ flowchart RL
 - Links: SCR-320 · SCR-321 · `listDepartmentRequests` · `listDepartmentMembers` · `getRequest` · FR-12, NFR-03
 - Type: خلفية · MVP: Must
 - Depends on: T-203
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] المدير يرى طلبات قسمه فقط، والطلبات الحساسة لا تظهر له قبل مراجعتها
   - [ ] تنجح معايير الملحق: AC-232 · AC-301 · AC-302 · AC-303 · AC-304 · AC-305 · AC-307
@@ -542,7 +542,7 @@ flowchart RL
 - Links: SCR-321 · `assignRequest` · `updateRequestStatus` · FR-13, FR-14, FR-15, FR-11
 - Type: خلفية · MVP: Must
 - Depends on: T-301, T-601
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] المدير يسند لنفسه أو لموظف من قسمه (✅ Q-09)
   - [ ] كل تغيير حالة يكتب سطرًا في سجل الحالة ويرسل إشعارًا للموظف في عملية واحدة
@@ -553,7 +553,7 @@ flowchart RL
 - Links: SCR-360 · `listDepartments` · `createDepartment` · `updateDepartment` · `deactivateDepartment` · FR-34, NFR-04
 - Type: خلفية · MVP: Must
 - Depends on: T-102
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] لا حذف للقسم، إيقاف فقط (ADR-4001)
   - [ ] تنجح معايير الملحق: AC-317 · AC-318 · AC-319 · AC-320 · AC-321
@@ -563,7 +563,7 @@ flowchart RL
 - Links: SCR-321 · `rerouteRequest` · — (Q-4202 · Q-4301)
 - Type: خلفية · MVP: Later
 - Depends on: T-302
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] إعادة التوجيه تفرّغ الإسناد (ADR-4205) — بعد اعتماد Q-4301
   - [ ] تنجح معايير الملحق: AC-316
@@ -573,7 +573,7 @@ flowchart RL
 - Links: SCR-320 · `listDepartmentRequests` · FR-12, NFR-03
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-301
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] التصفية حسب الحالة والأولوية و«غير مسند» تعمل
   - [ ] تنجح معايير الملحق: AC-009 · AC-301 · AC-302
@@ -583,7 +583,7 @@ flowchart RL
 - Links: SCR-321 · `getRequest` · `listDepartmentMembers` · `assignRequest` · `updateRequestStatus` · FR-12 → FR-15
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-302
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الإسناد وتحديث الحالة داخل الشاشة نفسها مع تأكيد قبل الحفظ (ADR-1301)
   - [ ] تنجح معايير الملحق: AC-009 · AC-306 · AC-308 · AC-311
@@ -593,7 +593,7 @@ flowchart RL
 - Links: SCR-360 · عمليات T-303 · FR-34
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-303
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] إضافة وتعديل قسم نوافذ داخل الشاشة، والإيقاف بتأكيد
   - [ ] تنجح معايير الملحق: AC-009 · AC-317
@@ -603,7 +603,7 @@ flowchart RL
 - Links: SCR-060 (Q-4408) · `importCompanyData` · FR-42, FR-24, NFR-05
 - Type: خلفية · MVP: Must
 - Depends on: T-102
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] ملف بيانات صحيح يُستورد وتُرجع أعداد الصفوف المقبولة والمرفوضة
   - [ ] بيانات الشركة يقرؤها محرك التحليل فقط
@@ -614,7 +614,7 @@ flowchart RL
 - Links: SCR-040 · `listAnalysisRuns` · `getAnalysisRun` · FR-29, FR-30, FR-43, NFR-25
 - Type: خلفية · MVP: Must
 - Depends on: T-001, T-102
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل تشغيل يحفظ نوعه ووقت بدئه وانتهائه وحالته والبيانات اللي استخدمها
   - [ ] نتائج التشغيل المكتمل لا تتغير
@@ -625,7 +625,7 @@ flowchart RL
 - Links: SCR-040 · SCR-440 → SCR-443 · `listInsights` · `getInsight` · `listKpis` · `getOperationalPerformance` · `listDetectedIssues` · `getDetectedIssue` · FR-16, FR-18, FR-20, FR-21, NFR-25, NFR-27
 - Type: خلفية · MVP: Must
 - Depends on: T-402
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل نتيجة ترجع مع كائن `analysis` (المصدر وتاريخ التحليل ورقم التشغيل)
   - [ ] المؤشرات من جدول `kpi_results` (✅ ADR-3405)
@@ -636,7 +636,7 @@ flowchart RL
 - Links: SCR-442 · SCR-443 · `listAnomalies` · `listTrends` · FR-26, FR-27
 - Type: خلفية · MVP: Should
 - Depends on: T-403
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] تعمل بنفس حقول وصلاحيات بقية النتائج
   - [ ] تنجح معايير الملحق: AC-410
@@ -646,7 +646,7 @@ flowchart RL
 - Links: SCR-444 · `listOpportunities` · FR-22
 - Type: خلفية · MVP: Later
 - Depends on: T-403
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] تعمل بنفس حقول وصلاحيات بقية النتائج
   - [ ] تنجح معايير الملحق: AC-410
@@ -656,7 +656,7 @@ flowchart RL
 - Links: SCR-440 · `listInsights` · `getInsight` · FR-16, FR-28
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-403
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل رؤية تعرض مصدرها وتاريخ تحليلها
   - [ ] تنجح معايير الملحق: AC-009 · AC-402 · AC-405
@@ -666,7 +666,7 @@ flowchart RL
 - Links: SCR-441 · `listKpis` · FR-18
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-403
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] آخر قيمة لكل مؤشر مع التغير عن السابقة ومصدرها
   - [ ] تنجح معايير الملحق: AC-009 · AC-406
@@ -676,7 +676,7 @@ flowchart RL
 - Links: SCR-442 · `getOperationalPerformance` · FR-20
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-403
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] عرض المؤشرات عبر الفترات، والاتجاهات تُضاف مع T-404
   - [ ] تنجح معايير الملحق: AC-009 · AC-408
@@ -686,7 +686,7 @@ flowchart RL
 - Links: SCR-443 · `listDetectedIssues` · `getDetectedIssue` · FR-21
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-403
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الترتيب بالخطورة ثم الأحدث، والشذوذ يُضاف مع T-404
   - [ ] تنجح معايير الملحق: AC-009 · AC-409
@@ -696,7 +696,7 @@ flowchart RL
 - Links: SCR-444 · `listOpportunities` · FR-22
 - Type: واجهة · MVP: Later
 - Depends on: T-030, T-405
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل فرصة تعرض مصدرها وتاريخ تحليلها
   - [ ] تنجح معايير الملحق: AC-009 · AC-410
@@ -706,7 +706,7 @@ flowchart RL
 - Links: — · (داخل التشغيل) · FR-24, FR-25, FR-28, NFR-14, NFR-24, NFR-26, NFR-27
 - Type: ذكاء اصطناعي · MVP: Must
 - Depends on: T-401, T-402
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] المؤشرات تُحسب باستعلامات لا بالذكاء الاصطناعي (ADR-4401)
   - [ ] كل رقم في نص الرؤية أو المشكلة موجود في نتائج الاستعلام
@@ -718,7 +718,7 @@ flowchart RL
 - Links: — · — · FR-31
 - Type: ذكاء اصطناعي · MVP: Later
 - Depends on: T-460
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] تشغيل `periodic` بدون مستخدم حسب جدول في الإعدادات
   - [ ] تنجح معايير الملحق: AC-417
@@ -728,7 +728,7 @@ flowchart RL
 - Links: SCR-040 · `runAnalysis` · FR-32, FR-29
 - Type: خلفية · MVP: Must
 - Depends on: T-460
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] للإدارة العليا فقط، ويرد 202 ويشتغل بالخلفية (ADR-4503)
   - [ ] تشغيل ثانٍ أثناء تشغيل جارٍ يرجع 409
@@ -739,7 +739,7 @@ flowchart RL
 - Links: SCR-580 · `askAi` · `listAskAiQuestions` · FR-17, FR-32, NFR-02, NFR-05
 - Type: خلفية · MVP: Must
 - Depends on: T-102, T-560
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل الأدوار الأربعة تسأل في محادثتها الخاصة (✅ Q-14)، والدور يُفحص قبل أي بيانات
   - [ ] كل مستخدم يرى أسئلته فقط في `ask_ai_questions` (ADR-3502)
@@ -750,7 +750,7 @@ flowchart RL
 - Links: SCR-541 · `listRecommendations` · `getRecommendation` · FR-19, NFR-25
 - Type: خلفية · MVP: Should
 - Depends on: T-403
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل توصية مع مصدرها وتاريخها ورقم التشغيل
   - [ ] تنجح معايير الملحق: AC-516 · AC-517
@@ -760,7 +760,7 @@ flowchart RL
 - Links: SCR-542 · `generateManagementReport` · `listManagementReports` · `getManagementReport` · FR-23, FR-44
 - Type: خلفية · MVP: Should
 - Depends on: T-403, T-204
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] التقرير يحوي ملخص حالة الطلبات للإدارة العليا (ADR-1204)
   - [ ] تنجح معايير الملحق: AC-520 · AC-521 · AC-522 · AC-523 · AC-524
@@ -770,7 +770,7 @@ flowchart RL
 - Links: SCR-580 · `askAi` · `listAskAiQuestions` · FR-17, FR-32
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-502
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل دور يفتح الشات من لوحته ويشوف أمثلة أسئلة دوره
   - [ ] الإجابة مع المصدر والتاريخ، والسؤال خارج الصلاحية يُرفض برد مهذب
@@ -782,7 +782,7 @@ flowchart RL
 - Links: SCR-541 · عمليات T-503 · FR-19
 - Type: واجهة · MVP: Should
 - Depends on: T-030, T-503
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] التوصية اقتراح يُعرض فقط ولا يُنفّذ تلقائيًا
   - [ ] تنجح معايير الملحق: AC-009 · AC-516 · AC-518
@@ -792,7 +792,7 @@ flowchart RL
 - Links: SCR-542 · عمليات T-504 · FR-23, FR-44
 - Type: واجهة · MVP: Should
 - Depends on: T-030, T-504
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] إنشاء تقرير وفتح التقارير المحفوظة
   - [ ] تنجح معايير الملحق: AC-009 · AC-520 · AC-523
@@ -802,7 +802,7 @@ flowchart RL
 - Links: — · (داخل `askAi`) · FR-17, NFR-02, NFR-05, NFR-27
 - Type: ذكاء اصطناعي · MVP: Must
 - Depends on: T-460
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] النموذج يختار مؤشرًا من قائمة الدور المعتمدة ولا يكتب استعلامات حرة (ADR-4501 · ADR-4504)
   - [ ] الإدارة العليا أرقام مجمّعة بلا أسماء
@@ -814,7 +814,7 @@ flowchart RL
 - Links: — · (داخل التشغيل) · FR-19
 - Type: ذكاء اصطناعي · MVP: Should
 - Depends on: T-460
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] التوصية بالبنية في `docs/ai.md` 2.5 ومرتبطة بمشكلة أو فرصة
   - [ ] تنجح معايير الملحق: AC-518 · AC-519
@@ -824,7 +824,7 @@ flowchart RL
 - Links: — · — · FR-17, NFR-02
 - Type: اختبار وإعداد · MVP: Must
 - Depends on: T-502
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] الأسئلة الـ 27 في `docs/ai.md` 5.4: المسموحة تختار المؤشر الصحيح، والـ 12 خارج الصلاحية كلها مرفوضة
   - [ ] تنجح معايير الملحق: AC-507
@@ -834,7 +834,7 @@ flowchart RL
 - Links: SCR-680 · `listMyNotifications` · `markNotificationRead` · `markAllNotificationsRead` · FR-04, FR-11, FR-41
 - Type: خلفية · MVP: Must
 - Depends on: T-102
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل مستخدم يرى إشعاراته فقط، وتعليم المقروء يتكرر بنفس النتيجة
   - [ ] تنجح معايير الملحق: AC-601 · AC-602 · AC-603 · AC-604 · AC-605
@@ -844,7 +844,7 @@ flowchart RL
 - Links: — · كل عملية تغيّر بيانات · FR-38, NFR-22, NFR-05
 - Type: خلفية · MVP: Must
 - Depends on: T-001
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] كل عملية تغيّر بيانات تكتب سجلها بدون كلمات سر
   - [ ] تنجح معايير الملحق: AC-004 · AC-105 · AC-609
@@ -854,7 +854,7 @@ flowchart RL
 - Links: SCR-660 · `listSystemLogs` · `getSystemLog` · FR-37, NFR-04
 - Type: خلفية · MVP: Should
 - Depends on: T-602
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] لمدير النظام فقط، وللقراءة فقط
   - [ ] تنجح معايير الملحق: AC-606 · AC-607 · AC-608
@@ -864,7 +864,7 @@ flowchart RL
 - Links: SCR-680 · عمليات T-601 · FR-04, FR-41
 - Type: واجهة · MVP: Must
 - Depends on: T-030, T-601
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] فتح الإشعار يعلّمه مقروءًا ويوصل الموظف لطلبه (SCR-203)
   - [ ] تنجح معايير الملحق: AC-009 · AC-601 · AC-603
@@ -874,7 +874,7 @@ flowchart RL
 - Links: SCR-660 · عمليات T-603 · FR-37
 - Type: واجهة · MVP: Should
 - Depends on: T-030, T-603
-- Owner: — · Reviewer: — (Q-4010)
+- Owner: حسب دليل المجموعة · Reviewer: زميل من المجموعة + القائد (✅ Q-4010)
 - Acceptance criteria:
   - [ ] تصفية وبحث وفتح تفاصيل سجل بدون تعديل
   - [ ] تنجح معايير الملحق: AC-009 · AC-606
@@ -887,7 +887,8 @@ flowchart RL
 ### 1. القواعد الأساسية
 
 - **مهمة واحدة = فرع واحد = Pull Request واحد.** ما نخلط مهمتين في فرع.
-- **الفرع الرئيسي (`main`) محمي:** ما أحد يرفع عليه مباشرة، كل شيء يدخله عن طريق Pull Request.
+- **`main` وفروع المجموعات الأربعة محمية:** ما أحد يرفع عليها مباشرة، كل شيء يدخلها عن طريق Pull Request. ⟵ عُدّل بقرار المنسق 2026-11-28
+- **مين يدمج:** الأعضاء يرفعون ويفتحون Pull Request ويراجعون شغل بعض وما يدمجون · القائد يدمج في فرع مجموعته بس · المنسق ولينا الطلحي بس يدمجون في `main` (`CLAUDE.md`).
 - **ما نبدأ مهمة قبل ما تخلص المهام اللي تعتمد عليها** (حقل «يعتمد على» في المهمة).
 - **ما نضيف شيء خارج المهمة.** لو لقينا نقص في المستندات، نكتبه سؤال مفتوح في `docs/decisions.md`.
 
@@ -899,7 +900,7 @@ flowchart RL
 | إصلاح عيب بعد المراجعة أو الاختبار | `fix/T-<رقم>-<اسم-قصير>` | `fix/T-230-empty-description` |
 
 - أسماء صغيرة، كلمات إنجليزية مفصولة بشرطة، وبدون مسافات.
-- الفرع يتفرّع دائمًا من آخر نسخة من `main`.
+- الفرع يتفرّع دائمًا من آخر نسخة من **فرع مجموعتك** (`group-1-wasl` · `group-2-shell` · `group-3-core` · `group-4-ai`)، والـ Pull Request يرجع له. ⟵ عُدّل بقرار المنسق 2026-11-28
 
 ### 3. رسائل الـ commit
 
@@ -927,12 +928,14 @@ flowchart RL
 
 ### 5. المراجعة والموافقات
 
-| نوع المهمة | عدد الموافقات | من يراجع |
+⟵ عُدّل بقرار المنسق 2026-11-28 (✅ ADR-4006): **موافقة وحدة لكل Pull Request**، وهذا اللي GitHub مضبوط عليه.
+
+| الطلب | مين يراجع | مين يدمج |
 |---|---|---|
-| عادية (خلفية، واجهة) | **1** | المراجع المحدد في المهمة، وما يكون صاحب المهمة |
-| **صلاحيات وتسجيل دخول** (الوحدة 1 ومهام الأدوار) | **2** | المراجع + عضو ثاني من فريق الخلفية |
-| **الذكاء الاصطناعي** (كتلة 60–79) | **2** | المراجع + عضو من مجموعة الذكاء الاصطناعي |
-| اختبارات وإعداد (كتلة 80–99) | 1 | المراجع المحدد في المهمة |
+| فرع مهمة ← فرع المجموعة | زميل من نفس المجموعة (مو صاحب المهمة)، ثم القائد | القائد |
+| فرع المجموعة ← `main` | المنسق أو لينا الطلحي | المنسق أو لينا الطلحي |
+
+مهام الصلاحيات (الوحدة 1) والذكاء الاصطناعي (60–79) تاخذ مراجعتين فعليًا: القائد عند الدمج في فرع المجموعة، ثم المنسق أو لينا قبل `main`.
 
 **المراجع يتأكد من:**
 - [ ] كل معيار قبول متحقق ومثبت بدليل في وصف الـ PR.
@@ -943,18 +946,20 @@ flowchart RL
 
 ### 6. الدمج ومتى
 
-- **يدمج:** صاحب المهمة بعد اكتمال الموافقات المطلوبة ونجاح الفحوصات، بطريقة **Squash and merge** (رسالة الدمج تبدأ برقم المهمة).
+- **يدمج في فرع المجموعة:** القائد، بطريقة **Squash and merge** (رسالة الدمج تبدأ برقم المهمة). ⟵ عُدّل بقرار المنسق 2026-11-28 (✅ ADR-4008)
+- **يدمج في `main`:** المنسق أو لينا الطلحي، بطريقة **Create a merge commit** (دمج عادي بدون Squash، عشان ما تصير تعارضات بين الفروع). ونفس الشي لتحديث فرع المجموعة من `main`.
+- **صاحب المهمة ما يدمج.**
 - **متى:** فقط لما:
   - [ ] الموافقات مكتملة.
   - [ ] كل المحادثات في المراجعة محلولة.
-  - [ ] الفرع محدّث مع `main` وبدون تعارضات.
+  - [ ] الفرع محدّث مع فرع المجموعة وبدون تعارضات.
   - [ ] الاختبارات والفحوصات خضراء.
 - بعد الدمج: يُحذف الفرع، وتُغلق المهمة.
 - **القائد** هو من يتدخل لو تعطل دمج أكثر من يوم، أو تعارض بين مهمتين.
 
 ### 7. التعارضات والتأخير
 
-- لو الفرع تأخر عن `main`، صاحب المهمة يحدّثه قبل طلب المراجعة.
+- لو الفرع تأخر عن فرع المجموعة، صاحب المهمة يحدّثه قبل طلب المراجعة.
 - المراجع يرد خلال يوم عمل. لو تأخر، صاحب المهمة يبلّغ القائد.
 - لو ظهر عيب بعد الدمج: Issue جديد برقم المهمة، وإصلاحه في فرع `fix/`.
 
@@ -967,10 +972,10 @@ flowchart RL
 
 | ID | البند | الحالة |
 |---|---|---|
-| ADR-4006 | موافقة واحدة على كل PR، وموافقتان لمهام الصلاحيات والذكاء الاصطناعي (كان ADR-4001) | proposed |
-| ADR-4007 | كل معيار قبول ثابت له اختبار، واسم الاختبار يبدأ برقم المهمة (من «خطة الاختبار») | proposed |
-| ADR-4008 | الدمج بطريقة Squash بواسطة صاحب المهمة بعد الموافقات والفحوصات، و`main` محمي (كان ADR-4003) | proposed |
+| ADR-4006 | موافقة وحدة لكل Pull Request (القائد يراجع قبل فرع المجموعة، والمنسق أو لينا قبل `main`) ⟵ عُدّل بقرار المنسق 2026-11-28 | ✅ approved (2026-11-28) |
+| ADR-4007 | كل معيار قبول ثابت له اختبار، واسم الاختبار يبدأ برقم المهمة (من «خطة الاختبار») | ✅ approved (2026-11-28) |
+| ADR-4008 | القائد يدمج في فرع المجموعة بـ Squash، والمنسق أو لينا يدمجون في `main` بـ Merge commit، و`main` وفروع المجموعات محمية ⟵ عُدّل بقرار المنسق 2026-11-28 | ✅ approved (2026-11-28) |
 | Q-4001 | أوامر الفحص التلقائي (CI) ومكان تشغيلها — التقنيات معتمدة الآن (Q-04 ✅)، فتُكتب في T-080 وT-081 | open |
 | Q-4009 | هل يُسمح بالرفع المباشر على `main` للتعديلات المستندية فقط (مثل `docs/`)؟ المقترح: لا، كلها عن طريق PR (كان Q-4005) | open — مقترح |
-| Q-4010 | من صاحب كل مهمة ومن مراجعها؟ يحددها قائد المجموعة 4 عند بداية المرحلة 3 حسب خبرة الأعضاء (Q-3001) | ✅ محسوم 2026-11-24: يحددها قائد المجموعة 4 أول المرحلة 3 |
+| Q-4010 | من صاحب كل مهمة ومن مراجعها؟ يحددها قائد المجموعة 4 عند بداية المرحلة 3 حسب خبرة الأعضاء (Q-3001) | ✅ محسوم 2026-11-28: صاحب كل مهمة في دليل مجموعته، والمراجع زميل من المجموعة ثم القائد |
 | Q-4408 | شاشات بدون رقم SCR: «عمليات التحليل» و«استيراد بيانات الشركة» — المقترح: داخل SCR-040 وSCR-060 (`docs/api.md`) | open |
